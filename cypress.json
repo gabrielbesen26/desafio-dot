@@ -1,7 +1,9 @@
 {
-    "baseUrl" : "http://automationpractice.com/index.php",
     "viewportWidth": 1920,
     "viewportHeight": 1080,
     "defaultCommandTimeout" : 30000,
-    "video" : false
+    "video" : false,
+    "env" : {
+        "QA_URL" : "http://automationpractice.com"
+    }
 }
