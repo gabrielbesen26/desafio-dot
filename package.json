@@ -4,13 +4,14 @@
   "description": "Testes automatizados para o desafio da vaga Analista de Testes Automatizados",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cy:open" : "cypress open",
+    "cy:run" : "cypress run"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gabrielbesen26/desafio-dot.git"
   },
-  "author": "Gabriel Thomaz",
+  "author": "Gabriel Besen",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/gabrielbesen26/desafio-dot/issues"
