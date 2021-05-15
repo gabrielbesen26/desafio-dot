@@ -5,5 +5,6 @@
     "video" : false,
     "env" : {
         "QA_URL" : "http://automationpractice.com"
-    }
+    },
+    "waitForAnimations" : true
 }
