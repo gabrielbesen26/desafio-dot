@@ -3,11 +3,18 @@
 describe('Teste na funcionalidade: Carrinho de Compras', () =>{
 
     const _idProduto = 1;
-    const _url = Cypress.env('QA_URL');
+    const _url = Cypress.env('HOST');
+    let list;
+
+    before('Carregar lista de produtos', () => {
+        cy.fixture('produtosList').then((data) => {
+            list = data;
+        })
+    })
 
     it('Clicando em comprar deve adicionar o item ao carrinho de compras', () => {
-        cy.visit(`${_url}/index.php?id_product=${_idProduto}&controller=product`);
-        cy.title().should('contain', 'Faded Short Sleeve T-shirts');
+        cy.visitarProduto(list.produtos[0].id);
+        cy.title().should('contain', list.produtos[0].nome);
         cy.get('.shopping_cart').find('span').should('contain.text', '(empty)');
         cy.get('#quantity_wanted').clear().type('1');
         cy.get('#group_1').select('L');
@@ -35,10 +42,10 @@ describe('Teste na funcionalidade: Carrinho de Compras', () =>{
             .and('have.attr', 'src')
             .and('equal', `${_url}/img/p/3/3-small_default.jpg`);
         cy.get('.cart_description')
-            .should('contain.text', 'Faded Short Sleeve T-shirts')
+            .should('contain.text', list.produtos[0].nome)
             .and('contain.text', 'Color : Blue, Size : L');
         cy.get('.cart_avail').should('contain.text', 'In stock');
-        cy.get('.cart_unit').should('contain.text', '$16.51');
+        cy.get('.cart_unit').should('contain.text', list.produtos[0].valor);
         cy.get('.cart_quantity.text-center').find('input').its(1)
             .should('have.value', 1);
         cy.get('.cart_total').should('contain.text', '$16.51');

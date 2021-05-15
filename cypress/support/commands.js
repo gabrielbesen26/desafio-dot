@@ -23,3 +23,7 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('visitarProduto', (idProduto) => {
+    cy.visit(`${Cypress.env('HOST')}/index.php?id_product=${idProduto}&controller=product`);
+});

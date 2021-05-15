@@ -21,7 +21,7 @@ Seguir do comando:
     npm install
 Após a instalação das dependências, execute o comando:
 
-    npm run cy:run
+    npm run cy:run:qa
 
 ## Considerações
 Os testes:
