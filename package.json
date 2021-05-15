@@ -1,0 +1,24 @@
+{
+  "name": "desafio-dot",
+  "version": "1.0.0",
+  "description": "Testes automatizados para o desafio da vaga Analista de Testes Automatizados",
+  "main": "index.js",
+  "scripts": {
+    "cy:open" : "cypress open",
+    "cy:run:qa" : "cypress run --env HOST=http://automationpractice.com",
+    "cy:run:localhost" : "cypress run --env HOST=localhost"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielbesen26/desafio-dot.git"
+  },
+  "author": "Gabriel Besen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielbesen26/desafio-dot/issues"
+  },
+  "homepage": "https://github.com/gabrielbesen26/desafio-dot#readme",
+  "devDependencies": {
+    "cypress": "^7.3.0"
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "produtos" : [
+        {
+            "id" : 1,
+            "nome" : "Faded Short Sleeve T-shirts",
+            "valor" : "$16.51"
+        },
+        {
+            "id" : 2,
+            "nomeProduto" : "Blouse",
+            "valor" : "$27.00"
+        }
+    ]
+}

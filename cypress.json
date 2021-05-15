@@ -1,0 +1,10 @@
+{
+    "viewportWidth": 1920,
+    "viewportHeight": 1080,
+    "defaultCommandTimeout" : 30000,
+    "video" : false,
+    "env" : {
+        "HOST" : "http://automationpractice.com"
+    },
+    "waitForAnimations" : true
+}
